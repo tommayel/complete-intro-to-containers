@@ -1,0 +1,21 @@
+mkdir /my-new-root
+mkdir /my-new-root/bin
+mkdir /my-new-root/lib
+
+echo "my turbo secret" > /my-new-root/secret.txt
+
+cp /bin/bash /bin/ls /bin/cat /my-new-root/bin
+
+ldd /bin/bash
+cp /lib/aarch64-linux-gnu/libtinfo.so.5 /my-new-root/lib
+cp /lib/aarch64-linux-gnu/libdl.so.2 /my-new-root/lib
+cp /lib/aarch64-linux-gnu/libc.so.6 /my-new-root/lib
+cp /lib/ld-linux-aarch64.so.1 /my-new-root/lib
+
+ldd /bin/ls
+cp /lib/aarch64-linux-gnu/libselinux.so.1 /my-new-root/lib
+cp /lib/aarch64-linux-gnu/libpcre.so.3 /my-new-root/lib	
+cp /lib/aarch64-linux-gnu/libpthread.so.0 /my-new-root/lib
+
+ldd /bin/cat
+
